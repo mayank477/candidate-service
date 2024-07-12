@@ -34,14 +34,6 @@ class ForgotPasswordAction
         $resetUrl = 'http://localhost:3000/auth/new-password?token=' . $token . '&email=' . $candidate->email;
 
         // Send the password reset email
-        // $data = ['resetUrl' => $resetUrl];
-        // Mail::send('mail', $data, function ($message) use ($candidate) {
-        //     $message->to($candidate->email)
-        //         ->subject('Password Reset');
-        // });
-
-        // Send the password reset email
-        // $data = ['resetUrl' => $resetUrl];  // Include resetUrl in the data array
         $data = [
             'resetUrl' => $resetUrl,
             'candidateName' => $candidate->name  
