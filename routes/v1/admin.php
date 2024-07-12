@@ -9,7 +9,7 @@ use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
-    // info('hit me...');
+  
     Route::resource('candidates', AdminCandidateController::class);
     Route::resource('candidates.awards', AwardController::class);
     Route::resource('candidates.files', FileController::class);
